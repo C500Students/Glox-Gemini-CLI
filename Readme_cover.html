@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 480" width="1280" height="480">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bannerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="45%" stop-color="#121826"/>
+      <stop offset="85%" stop-color="#22132e"/>
+      <stop offset="100%" stop-color="#0a0a14"/>
+    </linearGradient>
+
+    <linearGradient id="neonPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff71ce"/>
+      <stop offset="100%" stop-color="#b92b8d"/>
+    </linearGradient>
+
+    <linearGradient id="bananaYellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff566"/>
+      <stop offset="50%" stop-color="#ffd000"/>
+      <stop offset="100%" stop-color="#e69500"/>
+    </linearGradient>
+
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#01cdfe"/>
+      <stop offset="100%" stop-color="#05ffa1"/>
+    </linearGradient>
+
+    <linearGradient id="jacketShade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffa85"/>
+      <stop offset="60%" stop-color="#ffd533"/>
+      <stop offset="100%" stop-color="#ffaa00"/>
+    </linearGradient>
+
+    <!-- CRT & Bloom Filters -->
+    <filter id="bloomGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Scanline Pattern -->
+    <pattern id="readmeScanlines" width="1280" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="1280" y2="0" stroke="#000000" stroke-width="1.2" opacity="0.3"/>
+    </pattern>
+
+    <pattern id="diagGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 0 24 L 24 0 M 0 0 L 24 24" stroke="#01cdfe" stroke-width="0.75" stroke-opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <!-- ================= BACKGROUND ================= -->
+  <rect width="1280" height="480" fill="url(#bannerBg)"/>
+  <rect width="1280" height="480" fill="url(#diagGrid)"/>
+
+  <!-- Cyber Horizon Accents -->
+  <circle cx="1020" cy="240" r="220" fill="#ff71ce" opacity="0.12" filter="url(#bloomGlow)"/>
+  <circle cx="1020" cy="240" r="160" fill="#ffd000" opacity="0.1" filter="url(#bloomGlow)"/>
+
+  <!-- Decorative Giant Kanji Watermark -->
+  <g font-family="'Impact', 'Arial Black', sans-serif" font-size="160" fill="none" stroke="#ff71ce" stroke-width="2" opacity="0.12">
+    <text x="760" y="320">電脳</text>
+  </g>
+
+  <!-- ================= LEFT: TYPOGRAPHY & HUD SPEC CARD ================= -->
+
+  <!-- Outer Tech Border & Header -->
+  <g transform="translate(60, 45)">
+    <!-- Brand Badge -->
+    <rect width="210" height="30" rx="6" fill="#151f30" stroke="#01cdfe" stroke-width="1.5"/>
+    <circle cx="18" cy="15" r="5" fill="#05ffa1" filter="url(#bloomGlow)"/>
+    <text x="32" y="20" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#01cdfe" letter-spacing="3">C500 // MASCOT CORE</text>
+
+    <!-- Main Repository Heading -->
+    <text x="0" y="90" font-family="'Arial Black', sans-serif" font-weight="900" font-size="52" fill="#ffffff" letter-spacing="2">
+      NANO BANANA <tspan fill="#ffd000">ナナ</tspan>
+    </text>
+    <text x="0" y="125" font-family="'Arial Black', sans-serif" font-weight="900" font-size="28" fill="#ff71ce" letter-spacing="4">
+      GLOX-GEMINI-CLI // OFFICIAL LOG
+    </text>
+
+    <!-- Architecture Pill Specs -->
+    <g transform="translate(0, 160)">
+      <!-- Spec 1: Model -->
+      <rect x="0" y="0" width="180" height="52" rx="8" fill="#0f1726" stroke="#1e2d44" stroke-width="1.5"/>
+      <rect x="0" y="0" width="5" height="52" rx="2" fill="#ffd000"/>
+      <text x="16" y="20" font-family="monospace" font-size="10" font-weight="bold" fill="#ffd000">COGNITION</text>
+      <text x="16" y="40" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Gemini 1.5 Flash</text>
+
+      <!-- Spec 2: Memory -->
+      <rect x="195" y="0" width="180" height="52" rx="8" fill="#0f1726" stroke="#1e2d44" stroke-width="1.5"/>
+      <rect x="195" y="0" width="5" height="52" rx="2" fill="#ff71ce"/>
+      <text x="211" y="20" font-family="monospace" font-size="10" font-weight="bold" fill="#ff71ce">STORAGE DUALITY</text>
+      <text x="211" y="40" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Redb + Fjall</text>
+
+      <!-- Spec 3: Target -->
+      <rect x="390" y="0" width="180" height="52" rx="8" fill="#0f1726" stroke="#1e2d44" stroke-width="1.5"/>
+      <rect x="390" y="0" width="5" height="52" rx="2" fill="#01cdfe"/>
+      <text x="406" y="20" font-family="monospace" font-size="10" font-weight="bold" fill="#01cdfe">RUNTIME</text>
+      <text x="406" y="40" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Rust on Termux</text>
+    </g>
+
+    <!-- Terminal Prompt Mock Line -->
+    <g transform="translate(0, 245)">
+      <rect width="570" height="42" rx="6" fill="#0a0f1a" stroke="#01cdfe" stroke-width="1.2"/>
+      <text x="16" y="26" font-family="'Courier New', monospace" font-size="13" fill="#05ffa1" font-weight="bold">
+        cadet@termux:~$ <tspan fill="#ffffff">cargo run --bin glox_gemini_cli</tspan><tspan fill="#ff71ce"> █</tspan>
+      </text>
+    </g>
+
+    <!-- Tagline Footnote -->
+    <text x="0" y="325" font-family="monospace" font-size="12" fill="#64748b" letter-spacing="2">
+      MOBILE-FIRST HYPERLOCAL INTELLIGENCE • CLASSROOM 500 REPOSITORY
+    </text>
+  </g>
+
+  <!-- ================= RIGHT: CELL-SHADED "NANO BANANA" ANIME CHARACTER ================= -->
+  
+  <g id="nanoBananaCharacter" transform="translate(980, 250)">
+    <!-- Cyber Halo / Energy Ring -->
+    <ellipse cx="0" cy="-160" rx="90" ry="24" fill="none" stroke="#ffd000" stroke-width="3" stroke-dasharray="14 8" filter="url(#bloomGlow)"/>
+
+    <!-- Hair Back Layers (Long Twin Banana-Curved Pigtails) -->
+    <!-- Left Pigtail (Banana Shape) -->
+    <path d="M -70 -70 C -150 -10, -180 130, -120 230 C -105 250, -90 230, -100 190 C -120 120, -100 20, -50 -40 Z" 
+          fill="url(#hairGrad)" stroke="#b37400" stroke-width="3"/>
+    <path d="M -120 230 L -126 245 L -105 250 Z" fill="#2e7d32"/> <!-- Banana Stem Tip -->
+
+    <!-- Right Pigtail (Banana Shape) -->
+    <path d="M 70 -70 C 150 -10, 180 130, 120 230 C 105 250, 90 230, 100 190 C 120 120, 100 20, 50 -40 Z" 
+          fill="url(#hairGrad)" stroke="#b37400" stroke-width="3"/>
+    <path d="M 120 230 L 126 245 L 105 250 Z" fill="#2e7d32"/> <!-- Banana Stem Tip -->
+
+    <!-- Mecha Banana Headphone Clips -->
+    <rect x="-72" y="-75" width="22" height="34" rx="6" fill="#1e293b" stroke="#01cdfe" stroke-width="2"/>
+    <circle cx="-61" cy="-58" r="5" fill="#ffd000"/>
+    <rect x="50" y="-75" width="22" height="34" rx="6" fill="#1e293b" stroke="#01cdfe" stroke-width="2"/>
+    <circle cx="61" cy="-58" r="5" fill="#ffd000"/>
+
+    <!-- Neck & Collar -->
+    <polygon points="-16,10 16,10 22,50 -22,50" fill="#fed7aa"/>
+    <polygon points="-4,22 4,22 8,45 -8,45" fill="#fbcfe8"/> <!-- Soft Neck Shadow -->
+
+    <!-- Cyber Bomber Jacket / High Tech Uniform -->
+    <path d="M -80 120 L -45 42 L 45 42 L 80 120 L 70 230 L -70 230 Z" fill="url(#jacketShade)" stroke="#0f172a" stroke-width="3"/>
+    <!-- Yellow Neon Jacket Trim -->
+    <path d="M -45 42 L -15 140 L -15 230 L 15 230 L 15 140 L 45 42" fill="#111827" stroke="#ffd000" stroke-width="2.5"/>
+    <line x1="0" y1="140" x2="0" y2="230" stroke="#01cdfe" stroke-width="2"/>
+
+    <!-- Shoulder Epaulets / Badges -->
+    <rect x="-75" y="80" width="16" height="30" rx="3" fill="#ff71ce"/>
+    <rect x="59" y="80" width="16" height="30" rx="3" fill="#01cdfe"/>
+
+    <!-- Head / Face Base -->
+    <path d="M -50 -50 C -55 10, -35 38, 0 45 C 35 38, 55 10, 50 -50 C 45 -90, -45 -90, -50 -50 Z" 
+          fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+
+    <!-- Anime Eyes (Crisp High-Contrast Cell-Shade) -->
+    <!-- Left Eye -->
+    <g transform="translate(-24, -22)">
+      <ellipse cx="0" cy="0" rx="14" ry="18" fill="#0f172a"/>
+      <!-- Outer Iris Gradient -->
+      <ellipse cx="0" cy="3" rx="12" ry="14" fill="#01cdfe"/>
+      <!-- Inner Pupil -->
+      <ellipse cx="0" cy="5" rx="7" ry="9" fill="#090d16"/>
+      <!-- Bright Highlights -->
+      <circle cx="-4" cy="-4" r="5" fill="#ffffff"/>
+      <circle cx="4" cy="8" r="2.5" fill="#ffffff"/>
+      <!-- Eyelash / Liner Top -->
+      <path d="M -16 -12 Q 0 -22 16 -10" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    </g>
+
+    <!-- Right Eye (Wink with Cyber Optical Reticle or Open) -->
+    <g transform="translate(24, -22)">
+      <ellipse cx="0" cy="0" rx="14" ry="18" fill="#0f172a"/>
+      <ellipse cx="0" cy="3" rx="12" ry="14" fill="#ffd000"/>
+      <ellipse cx="0" cy="5" rx="7" ry="9" fill="#090d16"/>
+      <circle cx="-4" cy="-4" r="5" fill="#ffffff"/>
+      <circle cx="4" cy="8" r="2.5" fill="#ffffff"/>
+      <path d="M -16 -10 Q 0 -22 16 -12" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    </g>
+
+    <!-- Nose & Mouth -->
+    <circle cx="0" cy="2" r="1.5" fill="#ea580c"/>
+    <path d="M -8 18 Q 0 26 8 18" stroke="#be123c" stroke-width="2.5" stroke-linecap="round" fill="#fda4af"/>
+
+    <!-- Cyber Cheek Blush Decals -->
+    <g fill="#ff71ce" opacity="0.6">
+      <rect x="-38" y="2" width="12" height="3" rx="1.5"/>
+      <rect x="-35" y="8" width="8" height="3" rx="1.5"/>
+      <rect x="26" y="2" width="12" height="3" rx="1.5"/>
+      <rect x="27" y="8" width="8" height="3" rx="1.5"/>
+    </g>
+
+    <!-- Front Bangs & Fringe Hair -->
+    <path d="M -52 -55 
+             C -40 -15, -30 0, -25 -10 
+             C -20 10, -10 15, -5 -20 
+             C 0 12, 12 18, 18 -15 
+             C 25 5, 38 0, 52 -55 
+             C 45 -105, -45 -105, -52 -55 Z" 
+          fill="url(#hairGrad)" stroke="#b37400" stroke-width="2.5"/>
+
+    <!-- Glossy Hair Highlight Halo -->
+    <path d="M -38 -65 Q 0 -80 38 -65" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.75" fill="none"/>
+
+    <!-- Banana Peeling Hair Clip (Left Side) -->
+    <g transform="translate(-42, -70) rotate(-20)">
+      <path d="M 0 0 C -15 -20, -30 -10, -25 10 Z" fill="#ffd000" stroke="#b37400" stroke-width="1.5"/>
+      <path d="M 0 0 C -5 -25, 15 -20, 10 5 Z" fill="#fff566" stroke="#b37400" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="5" fill="#22c55e"/>
+    </g>
+
+    <!-- Floating Glox Bot Familiar (Perched on Shoulder) -->
+    <g transform="translate(-90, 80)">
+      <circle cx="0" cy="0" r="22" fill="#1e293b" stroke="#01cdfe" stroke-width="2" filter="url(#bloomGlow)"/>
+      <rect x="-14" y="-7" width="28" height="14" rx="7" fill="#0b0f19"/>
+      <circle cx="-6" cy="0" r="3" fill="#00ffcc"/>
+      <circle cx="6" cy="0" r="3" fill="#00ffcc"/>
+      <line x1="0" y1="-22" x2="0" y2="-30" stroke="#ffd000" stroke-width="2"/>
+      <circle cx="0" cy="-32" r="3" fill="#ffd000"/>
+    </g>
+  </g>
+
+  <!-- ================= OVERLAYS ================= -->
+  <!-- Scanline Screen Filter -->
+  <rect width="1280" height="480" fill="url(#readmeScanlines)" pointer-events="none"/>
+
+  <!-- Crisp Outer Cyber Framing -->
+  <rect x="12" y="12" width="1256" height="456" fill="none" stroke="#01cdfe" stroke-width="1.5" stroke-opacity="0.4"/>
+  <path d="M 12 50 L 12 12 L 50 12" stroke="#ff71ce" stroke-width="3" fill="none"/>
+  <path d="M 1268 50 L 1268 12 L 1230 12" stroke="#ff71ce" stroke-width="3" fill="none"/>
+  <path d="M 12 430 L 12 468 L 50 468" stroke="#ff71ce" stroke-width="3" fill="none"/>
+  <path d="M 1268 430 L 1268 468 L 1230 468" stroke="#ff71ce" stroke-width="3" fill="none"/>
+</svg>
