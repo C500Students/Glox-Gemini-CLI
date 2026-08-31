@@ -1,0 +1,2 @@
+mkdir -p ~/glox_gemini_cli/src
+cd ~/glox_gemini_cli
